@@ -1,5 +1,5 @@
 .{
-    .name = "ame-power",
+    .name = "ame-tajikara",
     .version = "0.1.0",
     .minimum_zig_version = "0.13.0",
     .dependencies = .{},
