@@ -12,8 +12,10 @@ ame-power: 電源プロファイルを読む / 変える(powerprofilesctl の代
 
   ame-power                 今のプロファイル(power-saver / balanced / performance)を 1 行
   ame-power set <名前>      変える(power-saver・balanced・performance)
+  ame-power restore         最後に set したプロファイルに戻す(ログインのとき)
 
 power-profiles-daemon に D-Bus で直接たずねる(新しい名前 org.freedesktop.UPower.PowerProfiles、無ければ古い net.hadess.PowerProfiles)。
+set したものは $XDG_STATE_HOME/ame-shell/power に覚える(デーモンが起動のたびに別のものに戻すことがあるので)。
 終了コード: 0 できた / 1 デーモンが無い・変えられない / 2 使い方の誤り
 ```
 
